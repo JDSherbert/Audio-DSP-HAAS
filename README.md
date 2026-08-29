@@ -154,6 +154,6 @@ haas.reset();
 If you want to explore further, the natural next steps from here are:
 - A wet/dry mix parameter
 - Slow LFO modulation of the delay time to reduce mono compatibility issues
-- Mid/Side processing — applying the Haas effect only to the Side signal to preserve mono compatibility
+- Mid/Side processing; applying the Haas effect only to the Side signal to preserve mono compatibility
  
 -----------------------------------------------------------------------
