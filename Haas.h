@@ -11,7 +11,7 @@
 // psychoacoustic phenomenon that creates a sense of stereo width by
 // introducing a short delay between the left and right audio channels.
 //
-// When the same sound reaches both ears with a delay of 1–40ms, the brain
+// When the same sound reaches both ears with a delay of 1-40ms, the brain
 // perceives the sound as coming from the direction of the ear that heard it
 // first, even if the delayed channel is equal or slightly louder. This is
 // exploited in audio production to create the impression of a wider, more
@@ -21,7 +21,7 @@
 // channel passes through unmodified; the delayed channel is held in a
 // circular buffer and output after the configured delay time.
 //
-// Effective delay range: 1ms – 40ms.
+// Effective delay range: 1ms ~ 40ms.
 // Below 1ms: perceived as a comb filter/phase effect rather than space.
 // Above 40ms: perceived as a distinct echo rather than spatial widening.
 //
@@ -44,8 +44,8 @@ namespace Sherbert
         //
         // Controls which channel receives the delay.
         //
-        // Right: Left channel leads — sound perceived as coming from the left.
-        // Left:  Right channel leads — sound perceived as coming from the right.
+        // Right: Left channel leads -> sound perceived as coming from the left.
+        // Left:  Right channel leads -> sound perceived as coming from the right.
         // ------------------------------------------------------------------
  
         enum class DelayedChannel { Left, Right };
