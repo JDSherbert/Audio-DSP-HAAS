@@ -145,11 +145,11 @@ haas.reset();
  
 ## Limitations & Next Steps
  
-**No wet/dry mix** — this implementation outputs the delayed channel fully wet. In a production context you would typically blend the delayed channel with the dry signal to control the intensity of the effect.
+**No wet/dry mix**: this implementation outputs the delayed channel fully wet. In a production context you would typically blend the delayed channel with the dry signal to control the intensity of the effect.
  
-**Mono input assumed** — the `ProcessSample` API accepts separate `leftIn` and `rightIn` values, but the Haas effect only makes sense when both inputs carry the same mono signal. Passing a true stereo source will produce unpredictable results.
+**Mono input assumed**: the `ProcessSample` API accepts separate `leftIn` and `rightIn` values, but the Haas effect only makes sense when both inputs carry the same mono signal. Passing a true stereo source will produce unpredictable results.
  
-**No delay time modulation** — some production Haas implementations slowly drift the delay time to avoid phase cancellation artefacts when the effect is mixed to mono. This would require an LFO similar to the phaser implementation.
+**No delay time modulation**: some production Haas implementations slowly drift the delay time to avoid phase cancellation artefacts when the effect is mixed to mono. This would require an LFO similar to the phaser implementation.
  
 If you want to explore further, the natural next steps from here are:
 - A wet/dry mix parameter
