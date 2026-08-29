@@ -41,7 +41,7 @@ The Haas effect is a psychoacoustic phenomenon: when the same sound reaches both
  
 | File | Description |
 |---|---|
-| `Haas.h / .cpp` | Haas effect implementation — stereo delay with configurable delayed channel |
+| `Haas.h / .cpp` | Haas effect implementation: stereo delay with configurable delayed channel |
 | `main.cpp` | Example: applies the effect to a 440Hz mono sine wave, demonstrates both channel configurations and two delay times |
  
 -----------------------------------------------------------------------
