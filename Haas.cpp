@@ -27,14 +27,14 @@ void Sherbert::Haas::ProcessSample(float leftIn, float rightIn,
 {
     // === HOW THE HAAS EFFECT WORKS =====================================
     //
-    // The leading channel passes through to output immediately — no delay.
+    // The leading channel passes through to output immediately. No delay.
     // The delayed channel reads from the circular buffer (which holds samples
     // from 'delayInSamples' frames ago) and then writes the current input
     // into the buffer for future playback.
     //
     // The result is that both channels carry the same signal, but one lags
     // behind by the configured delay time. The brain interprets this timing
-    // difference as spatial information — the sound appears to originate
+    // difference as spatial information - the sound appears to originate
     // from the side of the leading (undelayed) channel.
     //
     // The circular buffer works identically to the reverb implementation:
@@ -46,14 +46,14 @@ void Sherbert::Haas::ProcessSample(float leftIn, float rightIn,
  
     if (delayedChannel == DelayedChannel::Right)
     {
-        // Left channel leads — right channel is delayed
+        // Left channel leads -> right channel is delayed
         leftOut  = leftIn;
         delayBuffer[writeIndex] = rightIn;
         rightOut = delayedSample;
     }
     else
     {
-        // Right channel leads — left channel is delayed
+        // Right channel leads -> left channel is delayed
         rightOut = rightIn;
         delayBuffer[writeIndex] = leftIn;
         leftOut  = delayedSample;
