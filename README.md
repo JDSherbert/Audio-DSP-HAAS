@@ -29,7 +29,7 @@
  
 A C++ implementation of the Haas effect (also known as the precedence effect), intended as a learning resource for understanding how inter-channel delay creates perceived stereo width from a mono source.
  
-The Haas effect is a psychoacoustic phenomenon: when the same sound reaches both ears with a delay of 1–40ms, the brain fuses them into a single perceived sound and localises it toward the ear that heard it first. This is exploited in audio production to widen a mono signal into a convincing stereo image, without creating a perceptible echo.
+The Haas effect is a psychoacoustic phenomenon: when the same sound reaches both ears with a delay of 1-40ms, the brain fuses them into a single perceived sound and localises it toward the ear that heard it first. This is exploited in audio production to widen a mono signal into a convincing stereo image, without creating a perceptible echo.
  
 > For a deeper dive into delay in general, see the [Audio Delay repository](https://github.com/JDSherbert/Audio-Delay).
  
@@ -58,7 +58,7 @@ monoInput ──►── Left  (leading) ────────────�
  
 The brain perceives this timing difference as spatial information and localises the sound toward the leading channel. Swapping which channel is delayed flips the perceived position.
  
-The delay is implemented as a fixed-size circular buffer — identical in structure to the reverb implementation — so no memory is allocated or freed during audio processing.
+The delay is implemented as a fixed-size circular buffer, identical in structure to the reverb implementation; so no memory is allocated or freed during audio processing.
  
 -----------------------------------------------------------------------
  
@@ -67,9 +67,9 @@ The delay is implemented as a fixed-size circular buffer — identical in struct
 | Delay | Perceptual Effect |
 |---|---|
 | < 1ms | Phase cancellation / comb filtering — not a Haas effect |
-| 1 – 10ms | Subtle width, tight image |
-| 10 – 30ms | Clear stereo spread, natural sounding |
-| 30 – 40ms | Wide image, approaching the limit of fusion |
+| 1 - 10ms | Subtle width, tight image |
+| 10 - 30ms | Clear stereo spread, natural sounding |
+| 30 - 40ms | Wide image, approaching the limit of fusion |
 | > 40ms | Perceived as a distinct echo rather than spatial width |
  
 -----------------------------------------------------------------------
